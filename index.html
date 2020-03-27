@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./app.js"></script>
+    <title>Re-usable Template Components</title>
+</head>
+<body>
+    <h1>Template Components</h1>
+    <template id="my-paragraph">
+        <style>
+            p {
+                color: #fff;
+                background-color: #555;
+                padding: 1rem;
+            }
+        </style>
+
+        <p>
+            <slot name="my-text">My default text</slot>
+        </p>
+    </template>
+    <my-paragraph>
+        <span slot="my-text">Let's have some different text!</span>
+    </my-paragraph>
+    <my-paragraph>
+        <span slot="my-text">Crazy different...</span>
+    </my-paragraph>
+    <my-paragraph>
+        <ul slot="my-text">
+            <li>Let's make</li>
+            <li>A list!</li>
+        </ul>
+    </my-paragraph>
+    <my-paragraph></my-paragraph>
+</body>
+</html>
