@@ -13,4 +13,4 @@ customElements.define("my-paragraph",
         }
     }
 
-)
+);
